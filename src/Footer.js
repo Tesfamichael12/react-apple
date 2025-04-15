@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import $ from "jquery";
 import flag from "./commonResources/images/icons/16.png";
 
 export default function Footer() {
+  useEffect(() => {
+    $(".footer-links-wrapper h3").click(function () {
+      $(this).next("ul").slideToggle();
+    });
+  }, []);
+
   return (
     <footer className="footer-wrapper">
       <div className="container">
@@ -25,13 +32,12 @@ export default function Footer() {
             <a
               href="https://www.goldmansachs.com/terms-and-conditions/Apple-Card-Customer-Agreement.pdf"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              {" "}
               Customer Agreement
             </a>
             . Additional iPhone Payments terms are{" "}
             <a href="https://www.apple.com/legal/sales-support/iphoneinstallments_us/">
-              {" "}
               here
             </a>
             .
@@ -274,7 +280,7 @@ export default function Footer() {
           </div>
           <div className="footer-country  col-sm-12 order-1 col-md-4 order-md-2 text-md-right col-lg-2 order-lg-3">
             <div className="flag-wrapper">
-              <img src={flag} />
+              <img src={flag} alt="Country Flag" />
             </div>{" "}
             <div className="footer-country-name">United States</div>
           </div>
