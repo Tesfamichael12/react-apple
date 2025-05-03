@@ -1,0 +1,9 @@
+.youtube-videos {
+  margin: 40px 0;
+}
+.youtube-videos h2 {
+  margin-bottom: 20px;
+}
+.youtube-videos iframe {
+  border-radius: 8px;
+}
